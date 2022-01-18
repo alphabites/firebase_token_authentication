@@ -2,7 +2,7 @@
 
 module FirebaseTokenAuthentication
   class Configuration
-    attr_accessor :cache_store, :firebase_project_id
+    attr_accessor :cache_store, :firebase_project_id, :logger
 
     def initialize
       @cache_store = nil
