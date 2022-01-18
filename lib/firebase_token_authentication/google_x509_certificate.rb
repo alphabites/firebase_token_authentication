@@ -17,6 +17,7 @@ module FirebaseTokenAuthentication
     def fetch_certificates
       client = Faraday.new do |builder|
         builder.use Faraday::HttpCache, store: FirebaseTokenAuthentication.config.cache_store
+        builder.adapter Faraday.default_adapter
       end
 
       response = client.get(GOOGLE_CERT_URL, {}, { "Accept" => "application/json" })
