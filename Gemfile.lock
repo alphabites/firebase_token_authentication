@@ -2,18 +2,36 @@ PATH
   remote: .
   specs:
     firebase_auth (0.1.0)
+      faraday
+      faraday-http-cache
+      jwt
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    debug (1.4.0)
+      irb (>= 1.3.6)
+      reline (>= 0.2.7)
     diff-lcs (1.5.0)
+    faraday (2.1.0)
+      faraday-net_http (~> 2.0)
+      ruby2_keywords (>= 0.0.4)
+    faraday-http-cache (2.2.0)
+      faraday (>= 0.8)
+    faraday-net_http (2.0.1)
+    io-console (0.5.11)
+    irb (1.4.1)
+      reline (>= 0.3.0)
+    jwt (2.3.0)
     parallel (1.21.0)
     parser (3.1.0.0)
       ast (~> 2.4.1)
     rainbow (3.1.1)
     rake (13.0.6)
     regexp_parser (2.2.0)
+    reline (0.3.1)
+      io-console (~> 0.5)
     rexml (3.2.5)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -44,6 +62,7 @@ GEM
     rubocop-rspec (2.7.0)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     unicode-display_width (2.1.0)
 
 PLATFORMS
@@ -51,6 +70,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  debug
   firebase_auth!
   rake (~> 13.0)
   rspec (~> 3.0)
