@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "firebase_auth"
+require "firebase_authentication"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

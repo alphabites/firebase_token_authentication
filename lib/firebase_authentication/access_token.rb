@@ -2,7 +2,7 @@
 
 require "jwt"
 
-module FirebaseAuth
+module FirebaseAuthentication
   class AccessToken
     attr_reader :certificate, :firebase_token, :key_id
 
@@ -22,7 +22,7 @@ module FirebaseAuth
     def verify
       decode(key: certificate.find(key_id))
     rescue StandardError => e
-      raise FirebaseAuth::Error, e.message
+      raise FirebaseAuthentication::Error, e.message
     end
 
     private
@@ -33,8 +33,8 @@ module FirebaseAuth
 
     def decode_options
       config_opts = {
-        aud: FirebaseAuth.config.firebase_project_id,
-        iss: "https://securetoken.google.com/#{FirebaseAuth.config.firebase_project_id}"
+        aud: FirebaseAuthentication.config.firebase_project_id,
+        iss: "https://securetoken.google.com/#{FirebaseAuthentication.config.firebase_project_id}"
       }
 
       DECODE_OPTIONS.merge(config_opts)

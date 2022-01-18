@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe FirebaseAuth::Configuration do
+RSpec.describe FirebaseAuthentication::Configuration do
   subject(:config) { described_class.new }
 
   it "instantiates the :firebase_project_id as nil" do

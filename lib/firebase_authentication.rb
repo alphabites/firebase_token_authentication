@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative "firebase_auth/access_token"
-require_relative "firebase_auth/google_x509_certificate"
-require_relative "firebase_auth/configuration"
-require_relative "firebase_auth/version"
+require_relative "firebase_authentication/access_token"
+require_relative "firebase_authentication/google_x509_certificate"
+require_relative "firebase_authentication/configuration"
+require_relative "firebase_authentication/version"
 
-module FirebaseAuth
+module FirebaseAuthentication
   class Error < StandardError; end
 
   class << self
