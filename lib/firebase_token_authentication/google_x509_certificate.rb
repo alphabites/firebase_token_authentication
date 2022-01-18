@@ -18,7 +18,8 @@ module FirebaseTokenAuthentication
       client = Faraday.new do |builder|
         builder.use Faraday::HttpCache,
                     store: FirebaseTokenAuthentication.config.cache_store,
-                    logger: FirebaseTokenAuthentication.config.logger,
+                    logger: FirebaseTokenAuthentication.config.logger
+
         builder.adapter Faraday.default_adapter
       end
 
