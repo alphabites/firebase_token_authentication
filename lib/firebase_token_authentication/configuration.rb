@@ -7,6 +7,7 @@ module FirebaseTokenAuthentication
     def initialize
       @cache_store = nil
       @firebase_project_id = nil
+      @logger = nil
     end
   end
 end

@@ -16,7 +16,9 @@ module FirebaseTokenAuthentication
 
     def fetch_certificates
       client = Faraday.new do |builder|
-        builder.use Faraday::HttpCache, store: FirebaseTokenAuthentication.config.cache_store
+        builder.use Faraday::HttpCache,
+                    store: FirebaseTokenAuthentication.config.cache_store,
+                    logger: FirebaseTokenAuthentication.config.logger,
         builder.adapter Faraday.default_adapter
       end
 

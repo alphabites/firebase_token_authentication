@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    firebase_auth (0.1.0)
+    firebase_token_authentication (0.1.1)
       faraday
       faraday-http-cache
       jwt
@@ -71,7 +71,7 @@ PLATFORMS
 
 DEPENDENCIES
   debug
-  firebase_auth!
+  firebase_token_authentication!
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.21)
