@@ -4,7 +4,7 @@ require "faraday"
 require "faraday-http-cache"
 require "json"
 
-module FirebaseAuthentication
+module FirebaseTokenAuthentication
   class GoogleX509Certificate
     GOOGLE_CERT_URL = "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com"
 
@@ -16,7 +16,7 @@ module FirebaseAuthentication
 
     def fetch_certificates
       client = Faraday.new do |builder|
-        builder.use Faraday::HttpCache, store: FirebaseAuthentication.config.cache_store
+        builder.use Faraday::HttpCache, store: FirebaseTokenAuthentication.config.cache_store
       end
 
       response = client.get(GOOGLE_CERT_URL, {}, { "Accept" => "application/json" })

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module FirebaseAuthentication
+module FirebaseTokenAuthentication
   class Configuration
     attr_accessor :cache_store, :firebase_project_id
 
