@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    firebase_token_authentication (0.1.1)
+    firebase_token_authentication (0.1.4)
       faraday
       faraday-http-cache
       jwt
@@ -67,7 +67,6 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
-  x86_64-linux
 
 DEPENDENCIES
   debug

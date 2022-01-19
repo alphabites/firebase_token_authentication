@@ -8,7 +8,10 @@ Gem::Specification.new do |spec|
   spec.authors = ["Nick Fuller"]
   spec.email = ["nfuller52@gmail.com"]
 
-  spec.summary = "Simple tool for verifying Firebase Authentication JWT tokens."
+  spec.summary = "Simple tool for verifying Firebase JWT access tokens."
+  spec.description = "A light weight Firebase access token validator which"\
+                     "utilizes HTTP caching to reduce network traffic when"\
+                     "validating against Google's X509 Certificates."
   spec.homepage = "https://github.com/alphabites/firebase_token_authentication"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"

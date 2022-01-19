@@ -21,14 +21,14 @@ module FirebaseTokenAuthentication
 
     def verify
       decode(key: certificate.find(key_id))
-    rescue StandardError => e
-      raise FirebaseTokenAuthentication::Error, e.message
     end
 
     private
 
     def decode(key: nil, verify_key: true)
       JWT.decode(firebase_token, key&.public_key, verify_key, decode_options)
+    rescue StandardError => e
+      raise FirebaseTokenAuthentication::Error, e.message
     end
 
     def decode_options
